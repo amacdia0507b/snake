@@ -1,6 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>uk.co.bithatch</groupId>
 	<artifactId>snake</artifactId>
@@ -14,8 +14,8 @@
 		<module>snake-ui-linux</module>
 		<module>snake-themes</module>
 		<module>snake-app-linux</module>
-		<module>snake-updater</module>
-		<module>snake-dist</module>
+		<!--<module>snake-updater</module>-->
+		<!--<module>snake-dist</module>-->
 	</modules>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -45,9 +45,9 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>uk.co.bithatch</groupId>
+				<groupId>com.github.goxr3plus</groupId>
 				<artifactId>FX-BorderlessScene</artifactId>
-				<version>5.0.3</version>
+				<version>4.4.0</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -70,17 +70,17 @@
 						<skip>true</skip>
 					</configuration>
 				</plugin>
-	            <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-	                <artifactId>maven-resources-plugin</artifactId>
-	                <version>3.2.0</version>
-                </plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>3.2.0</version>
+				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>buildnumber-maven-plugin</artifactId>
 					<version>1.4</version>
 					<configuration>
-					   <skip>true</skip>
+						<skip>true</skip>
 					</configuration>
 				</plugin>
 			</plugins>
@@ -88,24 +88,6 @@
 
 	</build>
 	<repositories>
-		<repository>
-			<id>javassh-opensource-snapshots</id>
-			<name>artifactory.javassh.com-snapshots</name>
-			<url>http://artifactory.javassh.com/opensource-snapshots</url>
-			<snapshots />
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-		</repository>
-		<repository>
-			<id>javassh-opensource-releases</id>
-			<name>artifactory.javassh.com-releases</name>
-			<url>http://artifactory.javassh.com/opensource-releases</url>
-			<releases />
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
 		<repository>
 			<id>oss-snapshots</id>
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
@@ -115,26 +97,6 @@
 			</releases>
 		</repository>
 	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>javassh-opensource-snapshots</id>
-			<name>artifactory.javassh.com-snapshots</name>
-			<url>http://artifactory.javassh.com/opensource-snapshots</url>
-			<snapshots />
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-		</pluginRepository>
-		<pluginRepository>
-			<id>javassh-opensource-releases</id>
-			<name>artifactory.javassh.com-releases</name>
-			<url>http://artifactory.javassh.com/opensource-releases</url>
-			<releases />
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</pluginRepository>
-	</pluginRepositories>
 	<name>Snake - Parent</name>
 	<description>The parent module for all Snake modules.</description>
 </project>
